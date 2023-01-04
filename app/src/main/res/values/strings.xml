@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Localez</string>
+    <string name="bisnis">Bisnis</string>
+    <string name="localez">Localez</string>
+    <string name="populer">Populer</string>
+    <string name="kesehatan">Kesehatan</string>
+    <string name="olahraga">Olahraga</string>
+    <string name="teknologi">Teknologi</string>
+    <string name="watch_world">Watch World</string>
+    <string name="imagebanner">ImageBanner</string>
+    <string name="my_workplace">My Workplace!</string>
+    <string name="workplace_design_refers_to_the_process_of_designing_amp_organizing_your_workplace_to"><![CDATA[Workplace design refers to the process of designing & organizing your workplace to ..]]></string>
+    <string name="steve_smith">Steve Smith</string>
+    <string name="_30_mins_ago">30 mins ago</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
