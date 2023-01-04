@@ -3,7 +3,7 @@ Project Mobile Programming
 2201792972 - Yose Pratama Siburian
 2301920626 - Doddie Prawarjito
 2440030872 - Jovito Colin
-2440030872 - Jovito Colin
+2440057501 - Nicole Wijaya
 
 Localez
 Localez is an android application that provides various information articles from various sources in indonesian language.
