@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1043301962827",
+    "project_id": "localez-d8081",
+    "storage_bucket": "localez-d8081.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1043301962827:android:292d1835b90c44fb2fe9ce",
+        "android_client_info": {
+          "package_name": "com.project.localez"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1043301962827-u1tiq5c7ti4afnsj370ckk27av356olh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzN4ayWYSlZ5N8gDVR0mO-2BsRb8xFdFA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1043301962827-u1tiq5c7ti4afnsj370ckk27av356olh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
