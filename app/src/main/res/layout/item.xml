@@ -3,12 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="22dp"-->
-<!--        android:descendantFocusability="blocksDescendants"-->
-<!--        android:orientation="vertical">-->
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardview"
@@ -35,17 +29,6 @@
                         android:scaleType="centerCrop"
                         android:contentDescription="@string/imagebanner"
                         />
-
-<!--                    <LinearLayout-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_gravity="end"-->
-<!--                        android:layout_marginTop="13dp"-->
-<!--                        android:layout_marginEnd="13dp"-->
-<!--                        android:gravity="end"-->
-<!--                        android:orientation="horizontal">-->
-<!--                    </LinearLayout>-->
-
                 </FrameLayout>
 
                 <LinearLayout

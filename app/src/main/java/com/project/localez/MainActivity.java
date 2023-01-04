@@ -1,12 +1,19 @@
 package com.project.localez;
 
-import android.os.Bundle;
+import static com.project.localez.Login.mGoogleSignInClient;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
 
@@ -22,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
         
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        findViewById(R.id.btn_logout).setOnClickListener(view -> signOut());
 
         ttoolbar = findViewById(R.id.toolbar);
         setSupportActionBar(ttoolbar);
@@ -59,5 +68,15 @@ public class MainActivity extends AppCompatActivity {
         });
 
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+    }
+
+    private void signOut() {
+        mGoogleSignInClient.signOut()
+                .addOnCompleteListener(this, task -> {
+                    Toast.makeText(MainActivity.this, "You've been logged out.", Toast.LENGTH_SHORT).show();
+                    Intent goLogin = new Intent(MainActivity.this, Login.class);
+                    startActivity(goLogin);
+                    finish();
+                });
     }
 }
