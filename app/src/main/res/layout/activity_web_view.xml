@@ -81,11 +81,34 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:padding="5dp"
-                        android:layout_weight="1">
-                        
+                        android:layout_weight="1"
+                        android:scaleType="centerCrop"
+                        android:id="@+id/imageview"
+                        android:src="@drawable/ic_launcher_background">
                     </ImageView>
-                </LinearLayout>
 
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="By John Doe"
+                    android:textSize="13sp"
+                    android:textStyle="italic"
+                    android:id="@+id/author"
+                    android:padding="5dp"
+                    android:textColor="@color/purple_200">
+                </TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/time"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:text="Published at"
+                    android:textSize="12sp"
+                    android:textStyle="bold">
+                </TextView>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
