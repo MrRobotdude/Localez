@@ -111,5 +111,4 @@
                 </TextView>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-
 </android>
