@@ -44,12 +44,14 @@
 
     </androidx.appcompat.widget.Toolbar>
 
+
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/category"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
+        android:layout_width="397dp"
+        android:layout_height="50dp"
         android:layout_below="@+id/toolbar"
-        android:layout_marginTop="1dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="7dp"
         android:backgroundTint="@color/white"
         app:tabIndicatorColor="#876445"
         app:tabIndicatorHeight="4dp"
@@ -83,15 +85,6 @@
 
         <com.google.android.material.tabs.TabItem
 
-            android:id="@+id/Technology"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/teknologi">
-
-        </com.google.android.material.tabs.TabItem>
-
-        <com.google.android.material.tabs.TabItem
-
             android:id="@+id/Business"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -99,15 +92,23 @@
 
         </com.google.android.material.tabs.TabItem>
 
+        <com.google.android.material.tabs.TabItem
+
+            android:id="@+id/Technology"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/teknologi">
+
+        </com.google.android.material.tabs.TabItem>
+
 
     </com.google.android.material.tabs.TabLayout>
-
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/contain"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="636dp"
         android:layout_below="@id/category"
-        android:layout_marginTop="0dp"/>
+        android:layout_marginTop="20dp" />
 
 </RelativeLayout>

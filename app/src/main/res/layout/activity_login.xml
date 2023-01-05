@@ -102,6 +102,7 @@
         android:layout_below="@id/text"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="40dp"
+        android:layout_marginRight="300dp"
         />
 
 </RelativeLayout>
