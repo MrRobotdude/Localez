@@ -3,6 +3,8 @@ package com.project.localez;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.text.format.DateUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +17,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.TimeZone;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
     Context context;
@@ -41,7 +46,21 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             context.startActivity(intent);
         });
 
-        holder.ttime.setText(modelArrayList.get(position).getPublishedAt());
+        @SuppressLint("SimpleDateFormat") SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
+        sdf.setTimeZone(TimeZone.getTimeZone("GMT"));
+        String published = modelArrayList.get(position).getPublishedAt();
+        Log.d("published", "onBindViewHolder: "+ published);
+        CharSequence ago = null;
+        try {
+            long time = sdf.parse(published).getTime();
+            long now = System.currentTimeMillis();
+            ago =
+                    DateUtils.getRelativeTimeSpanString(time, now, DateUtils.MINUTE_IN_MILLIS);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+        holder.ttime.setText(ago);
         holder.aauthor.setText(modelArrayList.get(position).getAuthor());
         holder.hheader.setText(modelArrayList.get(position).getTitle());
         holder.ccontent.setText(modelArrayList.get(position).getDescription());

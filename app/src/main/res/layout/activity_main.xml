@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:layout_marginTop="0dp"
-        android:background="#28394b"
+        android:background="@color/primary_localez"
         android:id="@+id/toolbar">
         <RelativeLayout
             android:layout_width="match_parent"
@@ -22,7 +22,7 @@
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:text="@string/localez"
-                android:textColor="#e1cda0"
+                android:textColor="@color/secondary_localez"
                 android:textSize="30sp"
                 android:textStyle="bold">
 
@@ -37,7 +37,7 @@
                 android:layout_margin="10dp"
                 android:text="@string/logout"
                 android:textAllCaps="false"
-                android:textColor="#e1cda0"
+                android:textColor="@color/secondary_localez"
                 tools:ignore="RelativeOverlap" />
         </RelativeLayout>
 
@@ -53,11 +53,11 @@
         android:layout_marginTop="0dp"
         android:layout_marginStart="7dp"
         android:backgroundTint="@color/white"
-        app:tabIndicatorColor="#28394b"
+        app:tabIndicatorColor="@color/primary_localez"
         app:tabIndicatorHeight="4dp"
         app:tabMode="scrollable"
-        app:tabSelectedTextColor="#28394b"
-        app:tabTextColor="#876445">
+        app:tabSelectedTextColor="@color/primary_localez"
+        app:tabTextColor="@color/accent_localez">
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/Popular"

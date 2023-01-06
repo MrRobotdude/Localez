@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#e1cda0"
+    android:background="@color/primary_localez"
     android:id="@+id/root_view"
     android:layout_centerVertical="true"
     tools:context=".Login">
@@ -58,8 +58,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:ignore="ContentDescription,RelativeOverlap"
-        android:backgroundTint="#28394b"
-        app:tint="#e1cda0"/>
+        android:backgroundTint="@color/secondary_localez"
+        app:tint="@color/primary_localez"/>
 
 
     <ImageView
@@ -78,7 +78,7 @@
         android:text="@string/login"
         android:textSize="30sp"
         android:textStyle="bold"
-        android:textColor="#28394b"/>
+        android:textColor="@color/secondary_localez"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_register"
@@ -88,9 +88,9 @@
         android:layout_marginTop="40dp"
         android:background="@drawable/sp_rectangle_root"
         android:text="@string/register"
-        android:textColor="#e1cda0"
+        android:textColor="@color/primary_localez"
         android:textAllCaps="false"
-        android:backgroundTint="#28394b"/>
+        android:backgroundTint="@color/secondary_localez"/>
 
     <TextView
         android:id="@+id/text"
@@ -101,15 +101,14 @@
         android:layout_marginTop="20dp"
         android:text="@string/or_you_can_sign_in_with"
         android:textSize="15sp"
-        android:textColor="#28394b"/>
+        android:textColor="@color/secondary_localez"/>
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/sign_in_button"
-        android:layout_width="wrap_content"
+        android:layout_width="128dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/text"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="40dp"
-        android:layout_marginEnd="300dp" />
+        android:layout_marginBottom="40dp" />
 
 </RelativeLayout>

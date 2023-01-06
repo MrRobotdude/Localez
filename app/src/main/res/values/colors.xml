@@ -7,4 +7,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="primary_localez">#28394b</color>
+    <color name="secondary_localez">#e1cda0</color>
+    <color name="accent_localez">#876445</color>
 </resources>
