@@ -29,7 +29,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @NonNull
     @Override
     public RecyclerViewAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.item, null, false);
+        @SuppressLint("InflateParams") View view = LayoutInflater.from(context).inflate(R.layout.item, null, false);
         return new ViewHolder(view);
     }
 
@@ -41,7 +41,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             context.startActivity(intent);
         });
 
-        holder.ttime.setText("Published in: - " +modelArrayList.get(position).getPublishedAt());
+        holder.ttime.setText(modelArrayList.get(position).getPublishedAt());
         holder.aauthor.setText(modelArrayList.get(position).getAuthor());
         holder.hheader.setText(modelArrayList.get(position).getTitle());
         holder.ccontent.setText(modelArrayList.get(position).getDescription());

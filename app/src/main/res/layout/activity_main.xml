@@ -51,7 +51,7 @@
         android:layout_height="50dp"
         android:layout_below="@+id/toolbar"
         android:layout_marginTop="0dp"
-        android:layout_marginLeft="7dp"
+        android:layout_marginStart="7dp"
         android:backgroundTint="@color/white"
         app:tabIndicatorColor="#876445"
         app:tabIndicatorHeight="4dp"

@@ -1,5 +1,6 @@
 package com.project.localez;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -28,7 +29,7 @@ public class Popular extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.card, null);
+        @SuppressLint("InflateParams") View v = inflater.inflate(R.layout.item_list, null);
 
         RecyclerView recyclerViewPopular = v.findViewById(R.id.recycler);
         modelArrayList=new ArrayList<>();
@@ -42,6 +43,7 @@ public class Popular extends Fragment {
 
     private void findNews() {
         API.getApiInterface().getNews(country,70, apikey).enqueue(new Callback<Article>() {
+            @SuppressLint("NotifyDataSetChanged")
             @Override
             public void onResponse(@NonNull Call<Article> call, @NonNull Response<Article> response) {
                 if (response.isSuccessful()){
