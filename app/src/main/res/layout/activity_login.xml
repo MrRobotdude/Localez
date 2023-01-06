@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E8E9E3"
+    android:background="#e1cda0"
     android:id="@+id/root_view"
     android:layout_centerVertical="true"
     tools:context=".Login">
@@ -53,10 +53,12 @@
         android:layout_marginEnd="40dp"
         android:layout_centerVertical="true"
         android:layout_alignParentEnd="true"
-        android:src="@drawable/ic_baseline_arrow_forward_24"
+        android:src="@drawable/ic_baseline_arrow_forward_24_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:ignore="ContentDescription,RelativeOverlap" />
+        tools:ignore="ContentDescription,RelativeOverlap"
+        android:backgroundTint="#28394b"/>
+
 
     <ImageView
         android:layout_width="match_parent"
@@ -73,9 +75,10 @@
         android:layout_marginBottom="40dp"
         android:text="@string/login"
         android:textSize="30sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textColor="#28394b"/>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -83,7 +86,9 @@
         android:layout_marginTop="40dp"
         android:background="@drawable/sp_rectangle_root"
         android:text="@string/register"
-        android:textAllCaps="false" />
+        android:textColor="#e1cda0"
+        android:textAllCaps="false"
+        android:backgroundTint="#28394b"/>
 
     <TextView
         android:id="@+id/text"
@@ -93,7 +98,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:text="@string/or_you_can_sign_in_with"
-        android:textSize="15sp" />
+        android:textSize="15sp"
+        android:textColor="#28394b"/>
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/sign_in_button"
@@ -102,7 +108,6 @@
         android:layout_below="@id/text"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="40dp"
-        android:layout_marginEnd="300dp"
-        />
+        android:layout_marginEnd="300dp" />
 
 </RelativeLayout>
