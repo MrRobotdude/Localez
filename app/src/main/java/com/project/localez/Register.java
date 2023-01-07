@@ -4,6 +4,7 @@ import static com.project.localez.Login.mGoogleSignInClient;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -19,6 +20,9 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Register extends AppCompatActivity {
 
@@ -65,8 +69,15 @@ public class Register extends AppCompatActivity {
                 Toast.makeText(Register.this, "Please fill all the field!", Toast.LENGTH_SHORT).show();
                 return;
             }
+            if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+                Toast.makeText(Register.this, "Please input valid email address!", Toast.LENGTH_SHORT).show();
+            }
             else if(password.length() < 8){
                 Toast.makeText(Register.this, "Password must be longer than 8 characters!", Toast.LENGTH_SHORT).show();
+                return;
+            }
+            else if(!isValidPassword(password)){
+                Toast.makeText(Register.this, "Password must contain at least 1 Aphabet, 1 Number and 1 Special Character", Toast.LENGTH_SHORT).show();
                 return;
             }
             else if(!password.equals(cPassword)){
@@ -80,11 +91,11 @@ public class Register extends AppCompatActivity {
                         // Sign in success, update UI with the signed-in user's information
                         FirebaseUser user = mAuth.getCurrentUser();
 
-                        Toast.makeText(Register.this, "Authentication success.",
+                        Toast.makeText(Register.this, "Registration Complete. Please login your new account",
                                 Toast.LENGTH_SHORT).show();
                     } else {
                         // If sign in fails, display a message to the user.
-                        Toast.makeText(Register.this, "Authentication failed.",
+                        Toast.makeText(Register.this, "Registration Error.",
                                 Toast.LENGTH_SHORT).show();
                     }
                 });
@@ -144,4 +155,13 @@ public class Register extends AppCompatActivity {
         Toast.makeText(Register.this, "Authentication success.", Toast.LENGTH_SHORT).show();
     }
 
+    private boolean isValidPassword(String password){
+        Pattern pattern;
+        Matcher matcher;
+        final String PASSWORD_PATTERN = "^(?=.*[0-9])(?=.*[A-Z])(?=.*[@#$%^&+=!])(?=\\S+$).{4,}$";
+        pattern = Pattern.compile(PASSWORD_PATTERN);
+        matcher = pattern.matcher(password);
+
+        return matcher.matches();
+    }
 }

@@ -3,6 +3,7 @@ package com.project.localez;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -63,6 +64,9 @@ public class Login extends AppCompatActivity {
             if(email.equals("") || password.equals("")){
                 Toast.makeText(Login.this, "Please fill all the field", Toast.LENGTH_SHORT).show();
             }
+            if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+                Toast.makeText(Login.this, "Please input valid email address!", Toast.LENGTH_SHORT).show();
+            }
             else {
                 mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(Login.this, task -> {
                     if(task.isSuccessful()){
@@ -87,7 +91,7 @@ public class Login extends AppCompatActivity {
         Intent goMain = new Intent(Login.this, MainActivity.class);
         startActivity(goMain);
         finish();
-        Toast.makeText(Login.this, "Authentication success.", Toast.LENGTH_SHORT).show();
+        Toast.makeText(Login.this, "Welcome "+ user.getDisplayName(), Toast.LENGTH_SHORT).show();
     }
 
     @Override

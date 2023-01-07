@@ -24,7 +24,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:autofillHints=""
-            android:inputType="textEmailAddress" />
+            android:inputType="textEmailAddress"
+            android:layout_marginEnd="40dp"/>
 
         <View
             android:background="#E8E9E3"
@@ -42,7 +43,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:autofillHints=""
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:layout_marginEnd="40dp"/>
 
         <View
             android:background="#E8E9E3"
@@ -60,7 +62,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:autofillHints=""
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:layout_marginEnd="40dp"/>
 
     </RelativeLayout>
 
