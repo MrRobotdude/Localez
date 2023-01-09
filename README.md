@@ -11,19 +11,19 @@ You can read any updated and hot-topic news from many sources on this app withou
 
 We are using News API from https://newsapi.org/
 
-Login Page
+# Login Page
 
 ![Login](https://user-images.githubusercontent.com/54783708/211239995-bfb00e6b-e467-4184-ae74-8d98d91fe09e.png)
 
 This is the view of the login page, user can login via google, or just type their credential into the textboxes if they have any account. The textboxes have validations such as: user can't leave any textboxes empty, or inputing invalid email. If they fail to login with an account, Localez will notify them that authentication failed or some certain validation need to be followed.
 
-Register Page
+# Register Page
 
 ![Register](https://user-images.githubusercontent.com/54783708/211240356-34f70fe6-a250-4488-a9d1-309ad06ba8ae.png)
 
 This is the view of register page. Similar to login, in this page, user can just login via google, or just create new account with email and new password. The textboxes have validations such as: user can't leave any textboxes empty, inputing invalid email, inputing password less than 8 characters long or did not contain atleast 1 alphabet, 1 number, and 1 special character, and also user can't fill password textbox and confirm password textbox different. If they fail to register with new account, Localez will notify them that registration error or some certain validation need to be followed.
 
-Home Page
+# Home Page
 
 ![Main](https://user-images.githubusercontent.com/54783708/211240962-6767d697-0882-4cad-864c-918a29b3b781.png)
 
@@ -37,7 +37,7 @@ This is the look of different view of Home page when user change different categ
 
 This is the look of dfferent view of Home page when user change different region.
 
-Web View Page
+# Web View Page
 
 ![WebView](https://user-images.githubusercontent.com/54783708/211241323-c55a3b76-ca1a-47f4-84d1-a9f9c529cdba.png)
 
