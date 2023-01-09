@@ -77,7 +77,7 @@ public class Register extends AppCompatActivity {
                 return;
             }
             else if(!isValidPassword(password)){
-                Toast.makeText(Register.this, "Password must contain at least 1 Aphabet, 1 Number and 1 Special Character", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Register.this, "Password must contain at least 1 Alphabet, 1 Number and 1 Special Character", Toast.LENGTH_SHORT).show();
                 return;
             }
             else if(!password.equals(cPassword)){
