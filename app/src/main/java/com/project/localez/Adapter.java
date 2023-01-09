@@ -37,4 +37,9 @@ public class Adapter extends FragmentPagerAdapter {
     public int getCount() {
         return count;
     }
+
+    @Override
+    public int getItemPosition(@NonNull Object object) {
+        return POSITION_NONE;
+    }
 }

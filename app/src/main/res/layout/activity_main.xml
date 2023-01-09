@@ -24,19 +24,13 @@
                 android:text="@string/localez"
                 android:textColor="@color/secondary_localez"
                 android:textSize="30sp"
-                android:textStyle="bold">
-
-            </TextView>
+                android:textStyle="bold"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn_logout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="10dp"
                 android:background="@drawable/sp_rectangle2_root"
                 android:text="@string/logout"
                 android:textAllCaps="false"
@@ -107,11 +101,22 @@
 
     </com.google.android.material.tabs.TabLayout>
 
+    <Spinner
+        android:id="@+id/country_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/country_names"
+        android:layout_below="@id/category"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"/>
+
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/contain"
         android:layout_width="match_parent"
         android:layout_height="636dp"
-        android:layout_below="@id/category"
+        android:layout_below="@id/country_spinner"
         android:layout_marginTop="20dp" />
 
 </RelativeLayout>

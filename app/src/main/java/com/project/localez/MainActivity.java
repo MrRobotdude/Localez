@@ -4,6 +4,9 @@ import static com.project.localez.Login.mGoogleSignInClient;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,7 +23,8 @@ public class MainActivity extends AppCompatActivity {
     TabItem ppopular, bbusiness, hhealth, ssports, ttechnology;
     PagerAdapter pagerAdapter;
     Toolbar ttoolbar;
-
+    Spinner spinner;
+    public static String COUNTRY_CODE;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         
@@ -38,11 +42,30 @@ public class MainActivity extends AppCompatActivity {
         ssports = findViewById(R.id.Sports);
         ttechnology = findViewById(R.id.Technology);
 
+        spinner= findViewById(R.id.country_spinner);
+        spinner.setSelection(18);
+        int spinner_pos = spinner.getSelectedItemPosition();
+        String[] country_values = getResources().getStringArray(R.array.country_values);
+        COUNTRY_CODE = country_values[spinner_pos];
+
         ViewPager viewPager = findViewById(R.id.contain);
         tabLayout = findViewById(R.id.category);
 
         pagerAdapter = new Adapter(getSupportFragmentManager(),5);
         viewPager.setAdapter(pagerAdapter);
+
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                COUNTRY_CODE = country_values[position];
+                pagerAdapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override

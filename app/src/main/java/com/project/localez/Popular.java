@@ -21,7 +21,7 @@ public class Popular extends Fragment {
     String apikey = "85d9d90579e9429abb82075e9b697ff0";
     ArrayList<Model> modelArrayList;
     RecyclerViewAdapter adapter;
-    String country="id";
+
     public Popular() {
         // Required empty public constructor
     }
@@ -30,7 +30,6 @@ public class Popular extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         @SuppressLint("InflateParams") View v = inflater.inflate(R.layout.item_list, null);
-
         RecyclerView recyclerViewPopular = v.findViewById(R.id.recycler);
         modelArrayList=new ArrayList<>();
         recyclerViewPopular.setLayoutManager(new LinearLayoutManager(getContext()));
@@ -42,7 +41,7 @@ public class Popular extends Fragment {
     }
 
     private void findNews() {
-        API.getApiInterface().getNews(country,70, apikey).enqueue(new Callback<Article>() {
+        API.getApiInterface().getNews(MainActivity.COUNTRY_CODE,70, apikey).enqueue(new Callback<Article>() {
             @SuppressLint("NotifyDataSetChanged")
             @Override
             public void onResponse(@NonNull Call<Article> call, @NonNull Response<Article> response) {

@@ -21,7 +21,6 @@ public class Sport extends Fragment {
     String apikey = "249e265624eb4b2c81406ca7a1db01dd";
     ArrayList<Model> modelArrayList;
     RecyclerViewAdapter adapter;
-    String country="id";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -41,7 +40,7 @@ public class Sport extends Fragment {
     private void findNews() {
 
         String category = "sports";
-        API.getApiInterface().getCategoryNews(country, category, 70, apikey).enqueue(new Callback<Article>() {
+        API.getApiInterface().getCategoryNews(MainActivity.COUNTRY_CODE, category, 70, apikey).enqueue(new Callback<Article>() {
             @SuppressLint("NotifyDataSetChanged")
             @Override
             public void onResponse(@NonNull Call<Article> call, @NonNull Response<Article> response) {
