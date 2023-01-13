@@ -91,7 +91,7 @@ public class Login extends AppCompatActivity {
         Intent goMain = new Intent(Login.this, MainActivity.class);
         startActivity(goMain);
         finish();
-        Toast.makeText(Login.this, "Welcome "+ user.getDisplayName(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(Login.this, "Welcome", Toast.LENGTH_SHORT).show();
     }
 
     @Override
